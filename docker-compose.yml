@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  bot:
+    image: my-discord-bot
+    environment:
+      - DISCORD_TOKEN=MTIyNjA3NjEwODI3ODIwNjQ2NA.GpESEK.NAVtZ8DrkgdAKCIhh1lYzAQ3P3fTpQMwAmfP2M
+    ports:
+      - "3000:3000"
