@@ -52,3 +52,7 @@ check docker logs
 * docker-compose.yml
 
   Defines the Docker Compose services to simplify running and managing the container.
+
+## References
+discord.js
+https://discord.js.org/
