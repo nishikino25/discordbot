@@ -10,7 +10,7 @@ This is a Discord bot project based on Discord.js, using Docker for containerize
 2. Record the following parameters
     * client ID
     * token
-![alt text](image-1.png)
+![alt text](/img/image.png)
 3. Get Discord Channel ID
 Follow this [guide](https://en.wikipedia.org/wiki/Template:Discord_channel) to get your Channel Guild.
 
@@ -25,7 +25,7 @@ Follow this [guide](https://en.wikipedia.org/wiki/Template:Discord_channel) to g
 docker build -t my-discord-bot .
 docker-compose up -d
 ```
-![alt text](image.png)
+![alt text](/img/image-1.png)
 
 
 if compose not work, try the command below.
