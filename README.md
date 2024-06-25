@@ -27,14 +27,18 @@ docker-compose up -d
 ```
 ![alt text](/img/image-1.png)
 
+After compose, you can see the container execution in Docker.
+![alt text](/img/image-02.png)
 
-if compose not work, try the command below.
+If docker-compose not work, try the command below.
+```
+docker run -d --name discord-bot -e DISCORD_TOKEN=your_discord_token my-discord-bot
+```
 
-`docker run -d --name discord-bot -e DISCORD_TOKEN=your_discord_token my-discord-bot`
-
-check docker logs
-
-`docker-compose logs`
+Or check docker logs to fix problems.
+```
+docker-compose logs
+```
 
 ## File Descriptions
 * index.js
@@ -55,4 +59,5 @@ check docker logs
 
 ## References
 discord.js
+
 https://discord.js.org/
