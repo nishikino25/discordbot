@@ -7,14 +7,14 @@ const commands = [
   },
 ];
 
-const rest = new REST({ version: '10' }).setToken('MTIyNjA3NjEwODI3ODIwNjQ2NA.GpESEK.NAVtZ8DrkgdAKCIhh1lYzAQ3P3fTpQMwAmfP2M');
+const rest = new REST({ version: '10' }).setToken('your_discord_token');
 
 (async () => {
   try {
     console.log('Started refreshing application (/) commands.');
 
-    var CLIENT_ID="1226076108278206464";
-    var GUILD_ID="936558760300781588";
+    var CLIENT_ID="your_discord_clientid";
+    var GUILD_ID="your_discord_guild id";
 
     // await rest.put(Routes.applicationGuildCommands(CLIENT_ID, GUILD_ID), { body: commands });
     await rest.put(Routes.applicationCommands(CLIENT_ID), { body: commands });

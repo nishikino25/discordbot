@@ -27,4 +27,4 @@ client.on('interactionCreate', async interaction => {
 });
 
 // client.login('token');   
-client.login('MTIyNjA3NjEwODI3ODIwNjQ2NA.GpESEK.NAVtZ8DrkgdAKCIhh1lYzAQ3P3fTpQMwAmfP2M');
+client.login('your_discord_token');
