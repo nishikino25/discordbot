@@ -1,6 +1,9 @@
 // Require the necessary discord.js classes
 const { Client, Events, GatewayIntentBits, ActivityType } = require('discord.js'); //顯示正在做...模式
-const { DISCORD_TOKEN } = require('./config.json');
+
+// 引入 dotenv 套件並加載環境變數
+require('dotenv').config();
+const { CLIENT_ID, GUILD_ID, DISCORD_TOKEN } = process.env;
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -19,18 +22,19 @@ client.once(Events.ClientReady, readyClient => {
     // client.user.setActivity('前綴後面的文字', { type: ActivityType.Playing }); //將機器人的行為設置為正在玩
     // client.user.setActivity('前綴後面的文字', { type: ActivityType.Competing }); //將機器人的行為設置為競爭
 	console.log(`Ready! Logged in as ${readyClient.user.tag}`);
+
 });
 
+// When the client receives a message that is not a command
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  if (interaction.commandName === 'ping') {
-    await interaction.reply('Pong!');
-  }
+  if (interaction.commandName === 'test') {
+    await interaction.reply('Ping Pong!');
+  }  
+
 });
 
 // Log in to Discord with your client's token
-// client.login('your_discord_token');
 client.login(DISCORD_TOKEN);
 console.log('Starting Discord bot...');
-
