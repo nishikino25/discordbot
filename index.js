@@ -59,7 +59,12 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'user-info') {
-    await interaction.reply(`使用者名稱：${interaction.user.tag}\n使用者ID：${interaction.user.id}`);
+    await interaction.reply(
+      `使用者名稱：${interaction.user.username}\n`+
+      `使用者ＩＤ：${interaction.user.id}\n`+
+      `使用者創建時間：<t:${~~(interaction.user.createdTimestamp/1000)}:R>\n`+
+      `是否為機器人：${interaction.user.bot? '是':'否'}\n`
+    )
   }
 
   if (interaction.commandName === 'server-info') {
